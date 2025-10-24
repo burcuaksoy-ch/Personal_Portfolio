@@ -17,8 +17,10 @@
 </head>
 <body>
 
+
+  <!---------------------- HEADER ---------------------------------------------------------->
     <div class="container">
-    <!---------------------- HEADER ---------------------------------------------------------->
+   
         <nav id="header">
             <div class="nav-logo">
                 <p class="nav-name">Brc</p>
@@ -27,36 +29,34 @@
             <div class="nav-menu" id="myNavMenu">
                 <ul class="nav_menu_list">
                     <li class="nav_list">
-                        <a href="#home" class="nav-link active-link">Home</a>
+                        <a href="#home" class="nav-link active-link" >Home</a>
                         <div class="circle"></div>
                     </li>
 
                     <li class="nav_list">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="#about" class= "nav-link">About</a>
                         <div class="circle"></div>
                     </li>
 
                     <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projeckt</a>
+                        <a href="#projects" class= "nav-link">Project</a>
                         <div class="circle"></div>
                     </li>
-
                     <li class="nav_list">
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="#contact" class= "nav-link">Contact</a>
                         <div class="circle"></div>
                     </li>
                 </ul>
             </div>
             <div class="nav-button">
-                <button class= "btn" id="navBtn"><i class="uil uil-file-alt">Download CV</i></button>
+                <button class= "btn" id="download-btn"><i class="uil uil-file-alt">Download CV</i></button>
             </div>
             <div class="nav-menu-btn">
                 <i class="uil uil-bars" onclick="myMenuFunction()"></i>
             </div>
         </nav>
 
-
-
+    </div>    
 
     <!----------------------------    MAIN  ------------------------------------------------>
     <main class="wrapper">
@@ -82,7 +82,7 @@
                     <div class="icon"><i class="uil uil-instagram"></i></div>
                     <div class="icon"><i class="uil uil-linkedin"></i></div>
                     <div class="icon"><i class="uil uil-github-alt"></i></div>
-                    <div class="icon"><i class="uil uil-dribble"></i></div>
+                    
                 </div>
             </div>
             <div class="featured-image">
@@ -112,7 +112,7 @@
                             Wordpress.
                         </p>
                         <div class="about-btn">
-                            <button class="btn">Download CV <i class="uil uil-import"></i></button>
+                            <button class="btn" id="download-btn">Download CV <i class="uil uil-import"></i></button>
                         </div>
                     </div>
                 </div>
@@ -162,19 +162,51 @@
             </div>
             <div class="projeckts-container">
                 <div class="project-box">
-                    <i class="uil uil-briefcase-alt"></i>
-                    <h3>Completed</h3>
-                    <label>Finished Projeckts</label>
+                    <i class="uil uil-headphones-alt"></i>
+                    <h3>Podcast</h3>
+                    <button data-open-modal class="dialodBtn" id="modalBtn">Open</button>
+                    <dialog data-modal class="dataModal">
+                        <div class="DialogContenent">
+                            <div class="projeImageDiv"><br><img src="./assets/images/Podcast.png" alt="Itunes-Mini-Finder" width="900px" height="400px" class="projeImage"></div>
+                            <div><br><h3>🎧 Mini Podcast Finder</h3></div>
+                            <div><h4>A simple web application that searches podcasts via the iTunes Podcast API based on user input keywords. 
+                                <br>Built with HTML, CSS, and JavaScript.</h2><br><br></div>
+                            <div><h3>🚀 Features</h2></div>
+                            <ol>
+                                <ul>🔍 Search podcasts by keyword</ul>
+                                <ul>🌍 Select country (based on iTunes country codes)</ul>
+                                <ul>🎧 Display podcast type, title, and artist information</ul>
+                                <ul>🔗 Link to Apple Podcasts page</ul>
+                                <ul>💬 Simple, responsive user interface</ul><br>
+                            </ol>
+                            <div><h2></h2></div>
+                            <button data-close-modal class="dialodBtn" id="closeModal">Close</button>
+                            <button class="dialodBtn" title="Click to go to the Podcast Finder page" onclick="window.open('https://burcuaksoy-ch.github.io/Itunes-Mini-Podcast/', '_blank')">Podcast Finder</button>
+                        </div>
+                    </dialog>
+                    <label>Finished Podcast Projeckt</label>
                 </div>
                 <div class="project-box">
-                    <i class="uil uil-users-alt"></i>
-                    <h3>Clients</h3>
-                    <label>Happy Clients</label>
+                    <i class="uil uil-cloud-sun"></i>
+                    <h3>Weather App</h3>
+                    <button data-open-modal class="dialodBtn" id="modalBtn">Open</button>
+                    <dialog data-modal class="dataModal">
+                        <div><h3>This is a Weather App</h3></div>
+                        <button data-close-modal class="dialodBtn" id="closeModal">Close</button>
+                        <button class="dialodBtn">More Detail</button>
+                    </dialog>
+                    <label>Weather App</label>
                 </div>
                 <div class="project-box">
-                    <i class="uil uil-award"></i>
-                    <h3>Experience</h3>
-                    <label>Years in the field</label>
+                    <i class="uil uil-clipboard-notes"></i>
+                    <h3>To-Do List App</h3>
+                    <button data-open-modal class="dialodBtn" id="modalBtn">Open</button>
+                    <dialog data-modal class="dataModal">
+                        <div><h3>This is a TO-DO List</h3></div>
+                        <button data-close-modal class="dialodBtn" id="closeModal">Close</button>
+                        <button class="dialodBtn">More Detail</button>
+                    </dialog>
+                    <label>To-Do LIst</label>
                 </div>
 
                 
@@ -190,22 +222,33 @@
                 <div class="col">
                     <div class="contact-info">
                         <h2>Find me <i class="uil uil-corner-right-down"></i></h2>
-                        <p><i class="uil uil-envelope"></i> Email:burcu.aksoy@powercoders.org</p>
-                        <p><i class="uil uil-phone"></i>Tel: +41 077 275 55 66</p>
+                        <p>
+                            <i class="uil uil-envelope"></i>
+                            Email:
+                            <a href="mailto:burcu.aksoy@powercoders.org" class="link">burcu.aksoy@powercoders.org</a>
+                        </p>
+                        <p>
+                            <a href="tel:+410772755566" class="link" aria-label="Burcu Aksoy'u ara">
+                                <i class="uil uil-phone"></i>
+                                Tel: +41 077 275 55 66
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-control">
-                        <div class="form-inputs">
-                            <input type="text" class="input-field" placeholder="Name">
-                            <input type="text" class="input-field" placeholder="Email">
-                        </div>
-                        <div class="text-area">
-                            <textarea placeholder="Message"></textarea>
-                        </div>
+                     <form method="post" name="contact-form" class="form-inputs" id="submit-to-google-sheet">
+                        <input type="text" name="your-name" class="input-field" placeholder="Name" autofocus> 
+                        <input type="text" name="your-email" class="input-field" placeholder="Email">
+                        <textarea name="message" placeholder="Message"></textarea>
                         <div class="form-button">
-                            <button class="btn">Send<i class="uil uil-message"></i></button>
+                            <button type="submit" id="submit" class="btn">
+                                Send <i class="uil uil-message"></i>
+                            </button>
+                            
                         </div>
+                    </form>
+                        
                     </div>
                 </div>
             </div>
@@ -239,10 +282,18 @@
         </div>
         <div class="footer-social-icons">
             <div class="icon"><i class="uil uil-instagram"></i></div>
-            <div class="icon"><i class="uil uil-linkedin"></i></div>
-            <div class="icon"><i class="uil uil-github-alt"></i></div>
-            <div class="icon"><i class="uil uil-dribble"></i></div>
-                
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/burcuaksoy-ch/" class="social-link" target="_blank" rel="noopener">
+                    <div class="icon"><i class="uil uil-linkedin"></i></div>
+                </a>
+            </div>
+
+            <div class="icon">
+                <a href="https://github.com/burcuaksoy-ch" class="social-link" target="_blank" rel="noopener">
+                    <div class="icon"><i class="uil uil-github-alt"></i></div>
+                </a>
+            </div>
+              
         </div>
         <div class="bottom-footer">
             <p>Copyright &copy;<a href="#home" style="text-decoration: none;">Burcu Aksoy</a> -All rights reserved</p>
@@ -272,6 +323,12 @@
 
     <!-----------------------    MAIN JS       ------------------------------------------>
 
+    
+  
+    <script src="./assets/js/GoogleSheet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/JS/main.js"></script>
+    <script src="./assets/js/modal.js"></script>
+   
 </body>
 </html>

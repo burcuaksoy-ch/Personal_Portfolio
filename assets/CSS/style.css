@@ -41,6 +41,8 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 /*--------       CHANGE THE SCROLL BAR DESIGN         ----------*/
 
 ::-webkit-scrollbar{
@@ -87,7 +89,6 @@ html{
 i{
     font-size:  16px;
 }
-
 
 /*---------------------------------  BASE-------------------------------*/
 
@@ -136,10 +137,12 @@ nav{
 .nav-menu, .nav_menu_list{
     display: flex;
 }
+
 .nav-menu .nav_list{
     list-style: none;
     position: relative;
 }
+
 .nav-link{
   text-decoration: none;
   color: var(--text-color-second); 
@@ -260,13 +263,15 @@ nav{
     align-content:center;
     min-height: 80vh;
     width: 50%;
+    
 }
-.image{
+.image {
     margin: auto 0;
     width: 380px;
     border-radius: 55% 45% 55% 45%;
     overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
+   
    
 }
 .image img{
@@ -276,6 +281,7 @@ nav{
     
 
 }
+
 @keyframes imgFloat {
     50%{
         transform: translateY(10px);
@@ -283,6 +289,7 @@ nav{
     }
     
 }
+
 .scroll-btn{
     position: absolute;
     bottom: 0;
@@ -425,7 +432,7 @@ color: #777;
     color: #777;
 }
 
-/*.project-box:hover::after{ bottom: 0; }*/
+/*.project-box:hover::after{ bottom: 0; }   alternative  */
 .project-box::after, .contact-info::after{
     position: absolute;
     content: "";
@@ -435,16 +442,59 @@ color: #777;
     height: 100%;
     transition: .4s;
     z-index: 1;
+    
+}
+.project-box:hover #modalBtn {
+  background-color: var(--color-white);
+  color: var(--second-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .project-box:hover.project-box::after,
 .contact-info:hover.contact-info::after{
     bottom: 0;
+    
 }
 .project-box:hover.project-box i,
 .project-box:hover.project-box>h3,
 .project-box:hover.project-box>label{
     color: var(--color-white);
     z-index: 2;
+}
+
+.dialodBtn{
+    z-index: 100 ;
+    font-weight: 500;
+    padding: 12px 20px;
+    background: var(--second-color);
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--color-white);
+    border: none;
+    transition: background-color 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 8px;
+}
+
+
+
+.dataModal{
+
+  padding: 1em 2em;
+  margin: auto; 
+  width: fit-content;
+  background: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+  border: none;
+
+}
+
+
+.dataModal h3{
+  font-size: 20px;
+  color: --text-color-second;     /* Swiss Red */
+  
 }
 
 /*--------------------------------------CONTACT BOX----------------*/
@@ -488,51 +538,72 @@ color: #777;
     color: #777;
     z-index: 2;
 }
+
+/* ----------------EMAIL---------------- */
+.link,
+.link:link,
+.link:visited,
+.link:focus,
+.link:active
+ {
+  color: inherit;           
+  text-decoration: none;    
+}
+
+.link:hover
+ {
+  text-decoration: underline;
+}
+
+
+
 /*........................FORM CONTROL-----------------*/
-.form-control{
+.col{
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
 }
-.form-inputs{
-    display: flex;
-    gap: 10px;
-    width: 100%;
-}
-.input-field{
-    width: 50%;
-    height: 55px;
-    background: transparent;
-    border: 2px solid #AAA;
-    border-radius: 10px;
-    padding-inline: 20px;
-    outline: none;
-}
-textarea{
-    width: 100%; 
-    height: 250px;
-    background: transparent;
-    border: 2px solid #AAA;
-    border-radius: 10px;
-    padding: 15px 20px;
-    outline: none;
-    resize: none;
-}
-.form-button>.btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--second-color);
-    color: var(--color-white);
 
+.form-inputs {
+  display: flex;
+  flex-direction: column; /* dikey yığın olarak */
+  gap: 15px;
+  width: 100%;
 }
-.form-button>.btn:hover{
-  background: var(--first-color-hover); /* koyu Swiss Red */
+
+.input-field, textarea {
+  width: 100%;      /* Tüm inputlar ve textarea tam genişlikte */
+  height: 70px;
+  background: transparent;
+  border: 2px solid #AAA;
+  border-radius: 10px;
+  padding-inline: 20px;
+  outline: none;
+  box-sizing: border-box;
 }
-.form-button i{
-    font-size: 18px;
-    rotate: -45deg;
+
+textarea {
+  height: 150px;   /* Yüksekliği ihtiyaca göre ayarla */
+  padding: 15px 20px;
+  resize: none;
+}
+
+.form-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-button > .btn {
+  background: var(--second-color);
+  color: var(--color-white);
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-button > .btn:hover {
+  background: var(--first-color-hover);
 }
 
 
@@ -571,6 +642,26 @@ footer{
     font-size: 14px;
     margin-top: 10px;
 }
+
+/*---------------ICON---------------------*/
+.social-link,
+.social-link:link,
+.social-link:visited,
+.social-link:hover,
+.social-link:active,
+.social-link:focus {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;      
+  align-items: center;
+}
+
+.social-link:hover .icon,
+.social-link:focus .icon,
+.social-link:visited {
+  transform: translateY(-1px); 
+}
+
 
 
 
@@ -654,6 +745,7 @@ footer{
     .image, .image img{
         width: 150px;
         height: 150px;
+        
     }
     .row{
         display: flex;

@@ -1,7 +1,29 @@
+
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
+
+
+
+/*-----------------------------DOWNLOAD CV BUTTON---------------------------*/
+
+document.querySelectorAll('#download-btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const a = document.createElement('a');
+    a.href = './assets/public/Cv.pdf';
+    a.download = 'Burcu_AKSOY-CV.pdf';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  });
+});
+
+
+
 //------------------------- NAVIGATION BAR FUNCTION ------------------//
 function myMenuFunction() {
   const menu = document.getElementById("myNavMenu");
-  // sınıf ekle/çıkar (boşluk derdi yok)
+ 
   menu.classList.toggle("responsive");
 }
 
@@ -19,7 +41,7 @@ function headerShadow() {
 
 /*---------------------- TYPING EFFECT ----------------*/
 const typingEffect = new Typed(".typedText", {
-  strings: ["Designer", "Youtuber", "Developer"],
+  strings: ["Teacher", "Developer", "Designer"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
@@ -91,3 +113,7 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+
+
+

@@ -33,7 +33,10 @@ Libraries: Unicons, Typed.js, ScrollReveal
 │  │  ├─ avatar.jpg
 │  │  └─ favicon.ico
 │  └─ JS/
-│     └─ main.js
+│     ├─ main.js
+│     ├─ modal.js
+|     └─ googlesheet.js
+|
 └─ index.html
 
 🚀 Getting Started (Local)
