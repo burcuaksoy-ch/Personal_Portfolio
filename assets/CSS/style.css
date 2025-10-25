@@ -557,6 +557,10 @@ color: #777;
     z-index: 2;
 }
 
+#formUser{
+    cursor: none;
+}
+
 /* ----------------EMAIL---------------- */
 .link,
 .link:link,
