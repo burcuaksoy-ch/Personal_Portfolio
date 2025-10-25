@@ -1,28 +1,33 @@
-const openButton = document.getElementById("modalBtn");
-const closeButton = document.getElementById("closeModal");
-const modal = document.querySelector("[data-modal]");
-const moreDetail = document.querySelector("[more-detail-btn]");
-const dialog = document.querySelector("dialog")
+const openButtons = document.querySelectorAll(".dialodBtn");
+const closeButtons = document.querySelectorAll(".closeButton");
 
-openButton.addEventListener("click", () =>{
-    modal.showModal()
-})
+// Open specific modal based on data-target
+openButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const targetId = button.getAttribute("data-target");
+    const modal = document.getElementById(targetId);
+    if (modal) {
+      modal.showModal();
+    }
+  });
+});
 
-closeButton.addEventListener("click", () => {
-    modal.close()
-})
+// Close modal
+closeButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const modal = button.closest("dialog");
+    if (modal) {
+      modal.close();
+    }
+  });
+});
 
-dialog.addEventListener("click", e => {
-  const dialogDimensions = dialog.getBoundingClientRect()
-  if (
-    e.clientX < dialogDimensions.left ||
-    e.clientX > dialogDimensions.right ||
-    e.clientY < dialogDimensions.top ||
-    e.clientY > dialogDimensions.bottom
-  ) {
-    dialog.close()
-  }
-})
-
-
-
+// Close on backdrop click
+const modals = document.querySelectorAll(".dataModal");
+modals.forEach(dialog => {
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) {
+      dialog.close();
+    }
+  });
+});

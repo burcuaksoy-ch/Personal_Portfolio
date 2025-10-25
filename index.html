@@ -6,6 +6,9 @@
     
     <!-------------------------  UNICONS  ---------------------------------------------------> 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/solid.css">
+
     <!-------------------------   CSS  ------------------------------------------------------>   
     <link rel="stylesheet" href="./assets/CSS/style.css">
 
@@ -76,14 +79,28 @@
                 </div>
                 <div class="featured-text-btn">
                     <button class="btn blue-btn">Hire Me</button>
-                    <button class="btn" id="btn" >Download Cv<i class="uil uil-file-alt"></i></button>
+                    <button class= "btn" id="download-btn">Download Cv<i class="uil uil-file-alt"></i></button>
                 </div>
+
+
+
+
                 <div class="social-icons">
-                    <div class="icon"><i class="uil uil-instagram"></i></div>
-                    <div class="icon"><i class="uil uil-linkedin"></i></div>
-                    <div class="icon"><i class="uil uil-github-alt"></i></div>
-                    
+                    <a href="https://www.instagram.com/burcuaksoy_software/" class="social-link" target="_blank" rel="noopener">
+                        <div class="icon"><i class="uil uil-instagram"></i></div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/burcuaksoy-ch/" class="social-link" target="_blank" rel="noopener">
+                        <div class="icon"><i class="uil uil-linkedin"></i></div>
+                    </a>
+                    <a href="https://github.com/burcuaksoy-ch" class="social-link" target="_blank" rel="noopener">
+                        <div class="icon"><i class="uil uil-github-alt"></i></div>
+                    </a>
                 </div>
+
+
+
+
+
             </div>
             <div class="featured-image">
                 <div class="image">
@@ -161,11 +178,14 @@
                 <h1>Projeckts</h1>
             </div>
             <div class="projeckts-container">
+
+
+
                 <div class="project-box">
                     <i class="uil uil-headphones-alt"></i>
                     <h3>Podcast</h3>
-                    <button data-open-modal class="dialodBtn" id="modalBtn">Open</button>
-                    <dialog data-modal class="dataModal">
+                    <button data-open-modal class="dialodBtn" data-target="podcastModal">Open</button>
+                    <dialog data-modal class="dataModal" id="podcastModal">
                         <div class="DialogContenent">
                             <div class="projeImageDiv"><br><img src="./assets/images/Podcast.png" alt="Itunes-Mini-Finder" width="900px" height="400px" class="projeImage"></div>
                             <div><br><h3>🎧 Mini Podcast Finder</h3></div>
@@ -180,34 +200,82 @@
                                 <ul>💬 Simple, responsive user interface</ul><br>
                             </ol>
                             <div><h2></h2></div>
-                            <button data-close-modal class="dialodBtn" id="closeModal">Close</button>
-                            <button class="dialodBtn" title="Click to go to the Podcast Finder page" onclick="window.open('https://burcuaksoy-ch.github.io/Itunes-Mini-Podcast/', '_blank')">Podcast Finder</button>
+                            <button data-close-modal class="closeButton" id="closeModal">Close</button>
+                            <button class="closeButton" title="Click to go to the Podcast Finder page" onclick="window.open('https://burcuaksoy-ch.github.io/Itunes-Mini-Podcast/', '_blank')">Open App</button>
                         </div>
                     </dialog>
                     <label>Finished Podcast Projeckt</label>
                 </div>
+
+
+
                 <div class="project-box">
-                    <i class="uil uil-cloud-sun"></i>
-                    <h3>Weather App</h3>
-                    <button data-open-modal class="dialodBtn" id="modalBtn">Open</button>
-                    <dialog data-modal class="dataModal">
-                        <div><h3>This is a Weather App</h3></div>
-                        <button data-close-modal class="dialodBtn" id="closeModal">Close</button>
-                        <button class="dialodBtn">More Detail</button>
+                    <i class="uis uis-lock-alt"></i>
+                    <h3>User Authentication System</h3>
+                    <button data-open-modal class="dialodBtn" data-target="authModal">Open</button>
+                    <dialog data-modal class="dataModal" id="authModal">
+                        <div class="DialogContenent">
+                            <div class="projeImageDiv"><br><img src="./assets/images/userLogin.png" alt="Itunes-Mini-Finder" width="900px" height="400px" class="projeImage"></div>
+                            <div><br><h3>🔐 User Authentication System</h3></div>
+                            <div><h4>This project was aimed at learning by applying key concepts such as microservice architecture,
+                                <br> API security, and user authentication. 
+                                <br>The backend is built with Node.js and Express, using MongoDB Atlas as the database.
+                                <br> On the frontend, HTML, CSS, and JavaScript provide a clean and interactive user interface.</h2><br><br></div>
+                            <div><h3>🚀 Features</h2></div>
+                            <ol>
+                                <ul>📝 User Registration (Register)</ul>
+                                <ul>🔑 User Login (Login)</ul>
+                                <ul>🛡️ JWT token-based authentication</ul>
+                                <ul>🔒 Password hashing with bcrypt</ul>
+                                <ul>☁️ Cloud database integration using MongoDB Atlas</ul><br>
+                            </ol>
+                            <h6>This project gave me hands-on experience in integrating backend and frontend components,
+                                 managing deployment workflows with GitHub Actions, and handling cloud database connectivity. 
+                                <br>It also introduced me to common challenges in full-stack development and secure user management.</h4><br><br>
+                            <button data-close-modal class="closeButton" id="closeModal">Close</button>
+                            <button class="closeButton" title="Click to go to the Podcast Finder page" onclick="window.open('https://burcuaksoy-ch.github.io/nodejs-authentication-system/', '_blank')">Open App</button>
+                        </div>
                     </dialog>
-                    <label>Weather App</label>
+                    <label>Created User Authentication System</label>
                 </div>
-                <div class="project-box">
+
+
+
+              <div class="project-box">
                     <i class="uil uil-clipboard-notes"></i>
-                    <h3>To-Do List App</h3>
-                    <button data-open-modal class="dialodBtn" id="modalBtn">Open</button>
-                    <dialog data-modal class="dataModal">
-                        <div><h3>This is a TO-DO List</h3></div>
-                        <button data-close-modal class="dialodBtn" id="closeModal">Close</button>
-                        <button class="dialodBtn">More Detail</button>
+                    <h3>TO-DO LIST</h3>
+                    <button data-open-modal class="dialodBtn" data-target="todo">Open</button>
+                    <dialog data-modal class="dataModal" id="todo">
+                        <div class="DialogContenent">
+                            <div class="projeImageDiv"><br><img src="./assets/images/TO-DO.gif" alt="To-Do List Demo"></div>
+                            <div><br><h3>🔐 To-Do List Application</h3></div>
+                            <div><h4>A simple, elegant to-do list web application built with vanilla HTML, CSS, and JavaScript. 
+                                <br>Features persistent storage using localStorage and a clean, modern interface.</h2><br><br></div>
+                            <div><h3>🚀 Features</h2></div>
+                            <div><h4>✨ Core Functionality</h4></div>
+                            <ol>
+                                <ul>Add new tasks with a single click</ul>
+                                <ul>Mark tasks as completed with a visual checkmark</ul>
+                                <ul>Delete tasks easily</ul>
+                                <ul>Persistent storage - your tasks are saved even after closing the browser</ul>
+                            </ol>
+                            <div><h4>🎨 Design</h4></div>
+                            <ol>
+                                <ul>Modern gradient background</ul>
+                                <ul>Responsive design that works on all devices</ul>
+                                <ul>Smooth animations and hover effects</ul>
+                                <ul>Clean and intuitive user interface</ul>
+                            </ol>
+
+                            <h6>This is one of my early projects in web development, and I'm continuously improving my skills. 
+                                <br>Feedback is always appreciated!</h4><br><br>
+                            <button data-close-modal class="closeButton" id="closeModal">Close</button>
+                            <button class="closeButton" title="Click to go to the TOD-DO List" onclick="window.open('https://burcuaksoy-ch.github.io/TO-DO-LIST/', '_blank')">Open APP</button>
+                        </div>
                     </dialog>
-                    <label>To-Do LIst</label>
+                    <label>Designed a functional To-Do list application.</label>
                 </div>
+
 
                 
             </div>
@@ -281,7 +349,11 @@
             </ul>
         </div>
         <div class="footer-social-icons">
-            <div class="icon"><i class="uil uil-instagram"></i></div>
+            <div class="icon">
+                <a href="https://www.instagram.com/burcuaksoy_software/" class="social-link" target="_blank" rel="noopener">
+                    <div class="icon"><i class="uil uil-instagram"></i></div>
+                </a>
+            </div>
             <div class="icon">
                 <a href="https://www.linkedin.com/in/burcuaksoy-ch/" class="social-link" target="_blank" rel="noopener">
                     <div class="icon"><i class="uil uil-linkedin"></i></div>
