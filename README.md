@@ -1,30 +1,32 @@
-Burcu Aksoy — Portfolio
+# 🌟 Burcu Aksoy — Portfolio
 
-A modern, responsive single-page portfolio featuring Home, About, Projects, and Contact sections.
+A modern, responsive single-page portfolio featuring **Home**, **About**, **Projects**, and **Contact** sections.
 
-<!-- Replace with your actual screenshot path -->
 
-✨ Features
 
-Smooth single-page navigation (Home / About / Projects / Contact)
+---
 
-Animated typing with Typed.js
+## ✨ Features
 
-Scroll reveal effects with ScrollReveal
+- Smooth single-page navigation (Home / About / Projects / Contact)
+- Animated typing effect using **Typed.js**
+- Scroll reveal animations powered by **ScrollReveal**
+- **Unicons** icon set for a modern look
+- Fully responsive, mobile-first design
+- Clean and customizable code structure
 
-Unicons icon set
+---
 
-Mobile-first, responsive layout
+## 🧰 Tech Stack
 
-Easy to customize structure
+**Languages:** HTML5, CSS3, JavaScript (ES6)  
+**Libraries:** Unicons, Typed.js, ScrollReveal
 
-🧰 Tech Stack
+---
 
-HTML5, CSS3, JavaScript (ES6)
+## 📁 Project Structure
 
-Libraries: Unicons, Typed.js, ScrollReveal
-
-📁 Project Structure
+```
 .
 ├─ assets/
 │  ├─ CSS/
@@ -35,60 +37,70 @@ Libraries: Unicons, Typed.js, ScrollReveal
 │  └─ JS/
 │     ├─ main.js
 │     ├─ modal.js
-|     └─ googlesheet.js
-|
+│     └─ googlesheet.js
 └─ index.html
+```
 
-🚀 Getting Started (Local)
-# Clone the repo
+---
+
+## 🚀 Getting Started (Local)
+
+```bash
+# Clone the repository
 git clone https://github.com/<your-username>/portfolio.git
 cd portfolio
 
-# Open index.html with Live Server (VS Code)
-# Right-click index.html → “Open with Live Server”
+# Open with Live Server (VS Code)
+# Right-click index.html ➔ “Open with Live Server”
+```
 
-🛠️ Customization
+---
 
-Title & name: Update <title> and the name text in index.html.
+## 🛠️ Customization Guide
 
-Typed text: Edit the typedText strings in assets/JS/main.js.
+- **Title & Name:** Update `<title>` and your name in `index.html`
+- **Typed Text:** Edit the `typedText` strings in `assets/JS/main.js`
+- **Social Links:** Wrap your Unicons with `<a href="...">` (Instagram, LinkedIn, GitHub, etc.)
+- **Colors & Theme:** Customize variables and color palette in `assets/CSS/style.css`
+- **Projects Section:** Replace placeholder content with real project cards or statistics
 
-Social links: Wrap your Unicons with <a href="..."> for Instagram, LinkedIn, GitHub, etc.
+---
 
-Colors & theme: Adjust variables/colors in assets/CSS/style.css.
+## 🌐 Deploy to GitHub Pages
 
-Projects section: Replace counts/labels with your real project stats or cards.
+1. Push your repository to GitHub  
+2. Go to **Settings → Pages**  
+3. Under **Source**, choose:  
+   - **Deploy from a branch**  
+   - **Branch:** `main`  
+   - **Folder:** `/ (root)`  
+4. Save and visit your live site at:  
+   👉 **https://<your-username>.github.io/portfolio/**
 
-🌐 Deploy to GitHub Pages
+---
 
-Push to GitHub.
+## ✅ Polish & To-Do
 
-Repo → Settings → Pages
+- [ ] Link **Download CV** button to your real file (`/assets/CV/Burcu-Aksoy.pdf`)
+- [ ] Add real social media links
+- [ ] Replace any “Projeckt/Projeckts” typos with **Projects**
+- [ ] Fix About section typo: *well-versed* instead of *weel-versed*
+- [ ] Run **Lighthouse** audit and improve performance/accessibility scores
 
-Source: Deploy from a branch → Branch: main → Folder: / (root) → Save
+---
 
-Your site will be available at
-https://<your-username>.github.io/portfolio/
+## 📬 Contact
 
-✅ Polish & To-Do
+**Burcu Aksoy**  
+📧 [burcu.aksoy@powercoders.org](mailto:burcu.aksoy@powercoders.org)
 
- Link Download CV buttons to your actual CV file (e.g., /assets/CV/Burcu-Aksoy.pdf).
+🔗 Connect with me:  
+[LinkedIn](# https://www.linkedin.com/in/burcuaksoy-ch/) • [GitHub](# https://github.com/burcuaksoy-ch) • [Instagram](# https://www.instagram.com/burcuaksoy_software/)
 
- Add real links to social icons.
+---
 
- Replace “Projeckt/Projeckts” with Projects in HTML.
+## 📝 License
 
- Fix typos in About: well-versed (instead of weel-versed).
+Personal portfolio project.  
+You may include an **MIT License** if you want others to reuse or modify this template.
 
- Run Lighthouse and improve performance/accessibility scores.
-
-📬 Contact
-
-Burcu Aksoy
-📧 burcu.aksoy@powercoders.org
-
-🔗 Add your LinkedIn / GitHub / Instagram links
-
-📝 License
-
-Personal portfolio. You can add an MIT License if you want others to reuse the template.
