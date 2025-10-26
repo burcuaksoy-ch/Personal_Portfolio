@@ -1,6 +1,7 @@
 const openButtons = document.querySelectorAll(".dialodBtn");
 const closeButtons = document.querySelectorAll(".closeButton");
 
+
 // Open specific modal based on data-target
 openButtons.forEach(button => {
   button.addEventListener("click", () => {
@@ -8,6 +9,7 @@ openButtons.forEach(button => {
     const modal = document.getElementById(targetId);
     if (modal) {
       modal.showModal();
+      modal.scrollTop = 0;
     }
   });
 });
