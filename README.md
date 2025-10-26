@@ -1,5 +1,9 @@
 # 🌟 Burcu Aksoy — Portfolio
 
+
+## ![Portfolio_Demo](https://github.com/user-attachments/assets/037c5e02-c74a-48ae-a3fd-03906114f63a)
+
+
 A modern, responsive single-page portfolio featuring **Home**, **About**, **Projects**, and **Contact** sections.
 
 
@@ -95,12 +99,10 @@ cd portfolio
 📧 [burcu.aksoy@powercoders.org](mailto:burcu.aksoy@powercoders.org)
 
 🔗 Connect with me:  
-[LinkedIn](# https://www.linkedin.com/in/burcuaksoy-ch/) • [GitHub](# https://github.com/burcuaksoy-ch) • [Instagram](# https://www.instagram.com/burcuaksoy_software/)
 
+- [https://www.linkedin.com/in/burcuaksoy-ch/ ]  
+- [https://github.com/burcuaksoy-ch ] 
+- [ https://www.instagram.com/burcuaksoy_software/ ]
 ---
 
-## 📝 License
-
-Personal portfolio project.  
-You may include an **MIT License** if you want others to reuse or modify this template.
 
