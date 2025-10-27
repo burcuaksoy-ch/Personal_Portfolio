@@ -66,7 +66,7 @@ html{
 
 
 /*------------------  GLOBAL BUTTON DESIGN  ----------------------------------*/
-.btn{
+.btn, .blue-btn{
     font-weight: 500;
     padding: 12px 20px;
     background: #efefef;
@@ -561,6 +561,8 @@ color: #777;
     cursor: none;
 }
 
+
+
 /* ----------------EMAIL---------------- */
 .link,
 .link:link,
@@ -615,7 +617,7 @@ textarea {
   justify-content: flex-end;
 }
 
-.form-button > .btn {
+.form-button > .send-btn {
   background: var(--second-color);
   color: var(--color-white);
   padding: 12px 20px;
@@ -624,7 +626,7 @@ textarea {
   cursor: pointer;
 }
 
-.form-button > .btn:hover {
+.form-button > .send-btn:hover {
   background: var(--first-color-hover);
 }
 

@@ -7,7 +7,7 @@ window.onload = () => {
 
 /*-----------------------------DOWNLOAD CV BUTTON---------------------------*/
 
-document.querySelectorAll('#download-btn').forEach((btn) => {
+document.querySelectorAll('.btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     const a = document.createElement('a');
     a.href = './assets/public/Cv.pdf';
