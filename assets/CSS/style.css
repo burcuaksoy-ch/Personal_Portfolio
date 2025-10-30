@@ -10,16 +10,16 @@
   --color-white: #FFFFFF;
 
   /* text */
-  --text-color-second: #1F2937;   /* koyu gri (okunabilirlik) */
-  --text-color-third:  #D52B1E;   /* vurgu metin: Swiss Red */
+  --text-color-second: #1F2937;   
+  --text-color-third:  #D52B1E;   
 
   /* brand / actions */
-  --first-color:        #D52B1E;  /* Swiss Red (primary) */
-  --first-color-hover:  #B01F16;  /* Swiss Red koyu (hover/focus) */
+  --first-color:        #D52B1E;  
+  --first-color-hover:  #B01F16;  
 
   /* secondary accents (overlay, buton, highlight) */
-  --second-color: #E23E2D;  /* Swiss Red’e yakın, biraz daha açık ton */
-  --third-color:  #8E0A0A;  /* derin bordo – küçük rozette güzel durur */
+  --second-color: #E23E2D;  
+  --third-color:  #8E0A0A;  
 
   /* shadow */
   --first-shadow-color: rgba(0,0,0,.10);
@@ -348,6 +348,7 @@ h3{
     margin-bottom: 15px;
 }
 /*-----------------------------ABOUT INFO----------------------------*/
+
 .about-info{
     position: relative;
     display: flex;
@@ -359,7 +360,7 @@ h3{
     background: var(--color-white);
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     border-radius: 20px;
-    gap: 50px;
+    gap: 40px;
     
 }
 
