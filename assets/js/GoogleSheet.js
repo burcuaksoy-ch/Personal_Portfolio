@@ -9,13 +9,13 @@ form.addEventListener("submit", (e) => {
     const emailValue = form.querySelector('input[name="your-email"]').value.trim();
     const messageValue = form.querySelector('textarea[name="message"]').value.trim();
 
-    // Name: İngilizce, Almanca ve Türkçe harfler (büyük/küçük harf ve boşluklar)
+    // Name: English, German ve Tuskish letters 
     const isNameValid = /^[a-zA-ZäöüÄÖÜßçğıİşÇĞİŞÖÜ\s]+$/.test(nameValue);
 
-    // Email: Temel email doğrulama
+    // Email: Check Email
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
 
-    // Validation and warnings (in English)
+    // Validation and warnings
     if (!nameValue) {
         Swal.fire("Warning", "Name field cannot be empty!", "warning");
         return;
@@ -37,11 +37,11 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    // Buraya hızlı mesajı koy
+    
     Swal.fire({
         title: 'Processing...',
         didOpen: () => {
-            Swal.showLoading(); // Yükleniyor ikonu göster
+            Swal.showLoading(); // Loading icon
         }
     });
 
@@ -51,7 +51,7 @@ form.addEventListener("submit", (e) => {
     .then(async response => {
         const text = await response.text();
         const data = JSON.parse(text);
-        Swal.close(); // İşlem bittiğinde yükleniyor mesajını kapat
+        Swal.close(); // After finish close the loading message box...
         if (data.result === "success") {
             Swal.fire("Done", "Submitted Successfully.", "success");
             form.reset();
